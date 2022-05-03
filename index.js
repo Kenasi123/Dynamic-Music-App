@@ -25,15 +25,15 @@ app.get('/cd', (req, res) => {
 app.get('/albums/:song', (req, res) => { 
 
     const song = req.params.song;
-    // const list = database.find(f => f.song == song)
-  
+    
     if (song) {
             let htmlData = ``
-            htmlData +=`<h1>${song.name}<h1>
-            <h2>${song.publishDate}<h2>
-            <h3>${song.description}<h2>
-            <img src="/images/${song.imgURL}" alt=" " width="500" height="500">`
+            htmlData +=`<h1>${database[song].name}<h1>
+            <h2>${database[song].publishDate}<h2>
+            <h3>${database[song].description}<h2>
+            <img src="${database[song].imgURL}" alt=" " width="500" height="500">`
             res.send(htmlData);
+        song++;
         } else {
            res.status(404)
            res.send(`no album with the name ${song}`)
