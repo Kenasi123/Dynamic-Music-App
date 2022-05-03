@@ -10,17 +10,23 @@ const server = http.createServer(app); // creates an HTTP server usign our Expre
 const database = require('./app.js');
 
 app.get('/', (req, res) => {
-    res.send(`<div>
-                <ul> 
-                <li><a href="/albums/0">The Carter</li> 
-                <li><a href="/albums/0">Free Weezy</li> 
-                </ul>
-                </div>`);
+    res.send(`
+    <h1>About Me Lil Wayne</h1> 
+    <p>Dwayne Michael Carter Jr., known professionally as Lil Wayne, is an American rapper, singer, and songwriter. 
+    He is regarded by many contemporaries as one of the most influential hip hop artists of his generation, and often cited as one of the greatest rappers of all time.</p>
+    <img src="${database[2].imgURL}" alt=" " width="500" height="500">`)
 }); 
+
 app.get('/cd', (req, res) => {
 
-    res.send(`CD Playlist`);
+    res.send(`<div>
+    <ul> 
+    <li><a href="/albums/0">The Carter</li> 
+    <li><a href="/albums/0">Free Weezy</li> 
+    </ul>
+    </div>`);
 }); 
+
 
 app.get('/albums/:song', (req, res) => { 
 

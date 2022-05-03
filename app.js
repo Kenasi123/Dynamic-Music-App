@@ -13,5 +13,6 @@ module.exports = [{
     imgURL:"https://upload.wikimedia.org/wikipedia/en/a/ae/FreeWeezy.jpg",
 
    songTitles:["Glory","London Roads", "Murda", "My Heart Races On"]
- }
+ },
+ {imgURL:"https://cdns-images.dzcdn.net/images/cover/58cbc0f25d672d458b671859d14be5f8/350x350.jpg"}
 ]
